@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+      <Text className='text-red-700'>Tab One</Text>
   
       <EditScreenInfo path="app/(tabs)/index.tsx" />
     </View>
