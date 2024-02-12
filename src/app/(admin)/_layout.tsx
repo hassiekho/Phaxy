@@ -22,7 +22,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors.light.background,
-        tabBarInactiveTintColor: Colors.light.tint,
+        tabBarInactiveTintColor: Colors.light.tabIconDefault,
         tabBarStyle: {
           backgroundColor: Colors.light.tint
         },
