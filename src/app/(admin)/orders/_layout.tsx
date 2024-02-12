@@ -14,7 +14,6 @@ export default function MenuLayout() {
           title: "Orders",
         }}
       />
-      
     </Stack>
   );
 }
