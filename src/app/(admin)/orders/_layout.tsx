@@ -8,11 +8,13 @@ export default function MenuLayout() {
   return (
     <Stack>
       <Stack.Screen
-        name="index"
+        name="list"
         options={{
+          headerShown: false,
           title: "Orders",
         }}
       />
+      
     </Stack>
   );
 }
