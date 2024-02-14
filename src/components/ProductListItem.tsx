@@ -1,9 +1,9 @@
 import { Link, useSegments } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { Product } from "types";
+import { Product, Tables } from "types";
 
 type ProductListItemComponent = {
-  product: Product;
+  product: Tables<"products">;
 };
 
 export const ProductListItem = ({ product }: ProductListItemComponent) => {
