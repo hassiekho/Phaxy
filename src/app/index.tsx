@@ -19,12 +19,24 @@ const index = () => {
   }
   return (
     <View style={{ flex: 1, justifyContent: "center", padding: 10 }}>
-      <Link href={"/(user)"} asChild>
-        <Button text="User" />
-      </Link>
+     
       <Link href={"/(admin)"} asChild>
         <Button text="Admin" />
       </Link>
+      <Link href={"/(user)"} asChild>
+        <Button text="User" />
+      </Link>
+      <Link href={"/(user)"} asChild>
+        <Button text="Driver" />
+      </Link>
+      <Link href={"/(user)"} asChild>
+        <Button text="Merchant" />
+      </Link>
+      <Link href={"/(user)"} asChild>
+        <Button text="Producer" />
+      </Link>
+      
+    
       <Button onPress={() => supabase.auth.signOut()} text="Sign Out" />
     </View>
   );

@@ -1,8 +1,11 @@
 import { View, Text, FlatList, ActivityIndicator } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import orders from "@assets/data/orders";
 import OrderListItem from "@/components/OrderListItem";
 import { useAdminOrdersList } from "@/api/orders";
+import { supabase } from "@/lib/supabase";
+import { useQueryClient } from "@tanstack/react-query";
+import { useInsertOrderSubscription } from "@/api/orders/subscriptions";
 
 export default function index() {
   const {
@@ -11,6 +14,8 @@ export default function index() {
     error,
   } = useAdminOrdersList({ archived: false });
 
+  const queryClient = useQueryClient();
+  useInsertOrderSubscription();
   if (isLoading) {
     return <ActivityIndicator />;
   }

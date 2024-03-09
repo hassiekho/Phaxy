@@ -1,6 +1,7 @@
 import { Link, useSegments } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Product, Tables } from "types";
+import RemoteImage from "./RemoteImage";
 
 type ProductListItemComponent = {
   product: Tables<"products">;
