@@ -87,12 +87,15 @@ export default function CreateProductScreen() {
       createProduct();
     }
   };
-  const createProduct = () => {
+  const createProduct = async () => {
     if (!validateInput()) {
       return;
     }
+
+    const imagePath = await uploadImage();
+
     insertProduct(
-      { name, price: parseFloat(price), image },
+      { name, price: parseFloat(price), image: imagePath },
       {
         onSuccess: () => {
           resetFields();
@@ -108,7 +111,7 @@ export default function CreateProductScreen() {
     }
 
     const imagePath = await uploadImage();
-    console.log(imagePath)
+
     updateAProduct(
       {
         id,
